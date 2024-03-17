@@ -3,6 +3,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import ormConfig from '../orm.config';
 import { createConnection } from 'typeorm';
 import { MysqlConnectionOptions } from 'typeorm/driver/mysql/MysqlConnectionOptions';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 const DatabaseProvider: Provider[] = [
     {
@@ -21,11 +23,11 @@ const DatabaseProvider: Provider[] = [
     imports:[
         TypeOrmModule.forRoot({
             type: 'mysql',
-            host: 'localhost',
-            port: 3306,
-            username: 'root',
-            password: 'sapassword',
-            database: 'pharmacymanager_product',
+            host: process.env.HOST,
+            port: typeof process.env.PORT === 'number' ? process.env.PORT : 0,
+            username: process.env.USERNAME,
+            password: process.env.PASSWORD,
+            database: process.env.DATABASE,
             entities:  [__dirname + '/../**/*.entity.{js,ts}'], //['./**/entities/*.entity'],
             // autoLoadEntities: true,
             synchronize: true
