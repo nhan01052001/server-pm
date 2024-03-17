@@ -7,7 +7,7 @@ import { entities } from "../entities.provider";
 import { MedicineRepository } from "../repository/medicines.repository";
 import { Medicine } from "../entity/medicine.entity";
 import { MedicineDTO, MedicinesDTO, SaleMedicineDTO } from "../validator/dto/medicine.dto";
-import { FilterParamsDTO } from "../validator/dto/Address-params.dto";
+import { FilterParamsDTO } from "../validator/dto/address-params.dto";
 import { ProvincesService } from "./provinces.service";
 import { FindDTO } from "../validator/dto/find.dto";
 import moment from "moment";

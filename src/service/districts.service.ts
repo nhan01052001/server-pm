@@ -4,7 +4,7 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { DistrictsRepository } from "../repository/districts.repository";
 import { districts } from "../entity/districts.entity";
 import { ErrorResponse } from "../error/error-response.error";
-import { FilterParamsDTO } from "../validator/dto/Address-params.dto";
+import { FilterParamsDTO } from "../validator/dto/address-params.dto";
 import { ProvincesService } from "./provinces.service";
 
 @Injectable({})

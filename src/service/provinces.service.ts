@@ -4,7 +4,7 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { ProvincesRepository } from "../repository/provinces.repository";
 import { provinces } from "../entity/provinces.entity";
 import { ErrorResponse } from "../error/error-response.error";
-import { FilterParamsDTO } from "../validator/dto/Address-params.dto";
+import { FilterParamsDTO } from "../validator/dto/address-params.dto";
 import { SelectQueryBuilder } from "typeorm";
 import { entities } from "../entities.provider";
 
